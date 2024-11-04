@@ -45,8 +45,6 @@ h1, p{
     text-wrap: pretty;
 }
 
-
-
 /*Max width for whole site - mostly handles zoom and big screens*/
 header, main, footer{
     max-width: 1800px;
@@ -894,6 +892,7 @@ button.expand > a{
 /*materials container*/
 .materials-container{
     background-color:rgba(246, 248, 251, 1);
+    padding-bottom: 80px;
 }
 
 .materials-container > .heading-content{
@@ -961,6 +960,89 @@ button.expand > a{
     z-index: 1;
 }
 
+/*testimonial*/
+.header-testimonial{
+    padding: 80px 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header-testimonial > h1{
+    text-align: center;
+}
+
+.header-testimonial > p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.testimonial > .card-container{
+    margin: 0 121px 110px;
+    gap: 52px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 35.5px;
+    flex-basis: min(90%, 366px);
+    /* height: 404px; */
+    border: 1px solid rgba(222, 222, 222, 1);
+    box-shadow: 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.04),
+                0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card > .circle{
+    width: 112px;
+    height: 112px;
+    border: none;
+}
+
+.testimonial-card > .circle > img{
+    width: 198.8px;
+    height: 132.6px;
+    object-fit: cover;
+    transform: translate(-35%, -5%);
+}
+
+.testimonial-card p{
+    text-align: center;
+}
+
+.testimonial-card > p.name{
+    margin: 30px 0 14px;
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.testimonial-card > p.review{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    align-self: baseline;
+}
+
+.testimonial-card > p.location{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: var(--primary-color);
+}
 
 @media (max-width: 1084px) {
     .hero-img > img{
@@ -1035,6 +1117,12 @@ button.expand > a{
     .card-container{
         gap: 10px;
         margin: 0 20px;
+    }
+    .header-testimonial{
+        padding: 30px 60px;
+    }
+    .testimonial > .card-container{
+        margin: 0 20px 60px;
     }
 }
 
@@ -1165,5 +1253,8 @@ button.expand > a{
     }
     .mem-profile > .chat-bubble{
         left: 290px;
+    }
+    .header-testimonial{
+        padding: 30px;
     }
 }
